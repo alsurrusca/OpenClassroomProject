@@ -54,7 +54,8 @@
 </form>
 <?php
 
- if (isset($_POST['nom'])&&isset($_POST['prenom'])&&isset($_POST['username'])&& isset($_POST['password'])&&isset($_POST['question'])&& isset($_POST['reponse'])){
+ if (isset($_POST['nom'])&&isset($_POST['prenom'])&&isset($_POST['username'])&& isset($_POST['password'])&&isset($_POST['question'])&& isset($_POST['reponse']))
+ {
     $nom=$_POST['nom'];
     $prenom=$_POST['prenom'];
     $username=$_POST['username'];
