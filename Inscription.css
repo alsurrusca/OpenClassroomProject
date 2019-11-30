@@ -1,0 +1,23 @@
+#nouveau
+{
+    
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    cursor: default;
+    line-height: 46px;
+    position: relative;
+    top: -7px;
+    font-weight: bold;
+}
+    
+#footer
+{
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    
+    float: center;
+    font-weight: bold;
+    cursor: default;
+}
