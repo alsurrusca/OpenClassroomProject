@@ -65,6 +65,10 @@ if (empty($_SESSION['username']))
     <div id="BoutonDeco" class="BoutonDeco"> 
     <input type="submit" value = "Déconnexion"> </p> </a>  
 
+<a href="Ajout_acteur.php">
+    <div id="BoutonAjout" class="BoutonAjout">
+    <input type="submit" value="Ajouter un Acteur" > </a>
+
 
 
     </header>
@@ -91,5 +95,47 @@ Sa mission est de promouvoir l'activité bancaire à l'échelle nationale. C'est
 <br/>
 La GBAF souhaite proposer aux salariés des grands groupes français un point d'entrée unique, répertoriant un grand nombre d'informations sur les partenares et acteurs du groupe ainsi que sur les produits et services bancaires et financiers. 
         </p>
+
+<hr>
+
+<h2> Acteurs et Partenaires </h2>
+
+<table class="table table-bordered">
+
+<tr>
+    <th><p class="text-error">Logo</p></th>
+    <th><p class="text-error">Acteur</p></th>
+    <th><p class="text-error">Description</p></th>
+   
+    </tr>
+<tr>
+
+<?php
+
+$acteurs = $bdd->query('SELECT * FROM `acteur`');
+
+while ($a = $acteurs->fetch()) 
+{
+    ?> 
+<tr>
+
+    <p> <td>
+        <? echo $a['logo'];?>
+        </td>
+    <p> <td> <div class=acteur> </div>
+        <?php echo $a['acteur'];?>
+        </td>  
+    <p> <td>
+        <?php echo substr($a['description'], 0,50);?>
+        </td>
+    
+</tr>
+    <?php
+}
+
+$acteurs->closeCursor();
+?>
+
 </body>
+
 </html>
