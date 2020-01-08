@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -76,7 +79,8 @@
 
             $comparaison_username=false;
             $comparaison_password=false;
-
+           
+            
             // on écrit la boucle de comparaison (si $username = à ce qui a écrit), tant que la variable renvoie quelque chose on continue.
             // Tant que la $reponse renvoie une entree, que le login != et password != alors on continue.
 
@@ -88,7 +92,7 @@
                     $comparaison_username=true;
                     
 
-                        if (($password == $donnees['password']))
+                        if (password_verify($password, $donnees['password']))
                         {
                             $comparaison_password=true;
                         }
@@ -97,7 +101,7 @@
                 
             }
         // Si tout est faux, phrase de connexion
-        if (($comparaison_username==false) && ($comparaison_password==false))
+        if (($comparaison_username==false) && ($comparaison_password==false)) 
         {
             ?>
 
@@ -105,7 +109,9 @@
         <?php
         }
         // Si le username est bon mais pas le password on renvoie à l'oublie de mdp
-        if (($comparaison_username==true) && ($comparaison_password==false))
+       
+
+        if (($comparaison_username==true)  && ($comparaison_password==false) )
         {
             ?>
             <p> Mot de passe incorrect <br/>
@@ -115,7 +121,7 @@
         }
 
         //Si le username et le mdp est bon, alors on est redirigé vers la page accueil.php
-        if (($comparaison_username==true) && ($comparaison_password==true))
+        if (($comparaison_username==true)  && ($comparaison_password==true))
         {
             header('Location: Page1.php');
         }

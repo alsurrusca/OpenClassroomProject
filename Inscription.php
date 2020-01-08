@@ -48,7 +48,7 @@
 <fieldset>
     <legend> Question secrète : </legend>
     <p>
-        <label for="question">Choississez votre question secrète :</label>
+        <label for="question">Choisissez votre question secrète :</label>
         <select name="question" id="question" required>
             <option value="1">Où habitiez vous quand vous étiez petit ?</option>
             <option value="2">Le nom de jeune fille de votre mère ?</option>
@@ -86,7 +86,7 @@ if (isset($_POST['nom'])&&isset($_POST['prenom'])&&isset($_POST['username'])&& i
    }
    //cache du mdp
    $pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
-   
+
    $req = $bdd->prepare('INSERT INTO account(nom,prenom,username,mail,password,question,reponse) VALUES (:nom, :prenom, :username, :mail, :password, :question, :reponse)');
    $req->execute(array(
        'nom' => $nom,
@@ -98,15 +98,18 @@ if (isset($_POST['nom'])&&isset($_POST['prenom'])&&isset($_POST['username'])&& i
        'reponse' => $reponse
    ));
 
+   
 
 
 ?>
 
 Vous avez bien été enregistré, vous allez être redirigé vers la page d' accueil, ou bien <a href="Index.php"> cliquez ici !</a> <br/>
+<meta http-equiv="refresh" content="3; url=Index.php">
 <?php
 
 
 }
+
 
 
 else {
