@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_POST['nom_acteur'], $_POST['description_acteur'], $_POST['logo']))
 {
 

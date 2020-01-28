@@ -56,6 +56,7 @@ session_start();
 </form>
 
         <?php
+
             if (isset($_POST['username'])&& isset($_POST['password']))
             { 
                 // Si username et password sont définies et différentes de NULL 
@@ -123,7 +124,9 @@ session_start();
         //Si le username et le mdp est bon, alors on est redirigé vers la page accueil.php
         if (($comparaison_username==true)  && ($comparaison_password==true))
         {
-            header('Location: Page1.php');
+            $_SESSION['username']=$_POST['username'];
+            header('Location: PageActeurIndex.php');
+            //header('Location: entete.php');
         }
 
         
