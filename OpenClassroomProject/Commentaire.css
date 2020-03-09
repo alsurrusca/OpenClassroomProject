@@ -1,0 +1,21 @@
+header {
+
+    text-align: middle;
+    text-align: center;
+    font-weight: bold;
+  
+}
+
+body {
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #FF2A00 ; 
+    background: linear-gradient(360deg,#FF2A00, white );
+    width: 600px;
+    height: 760px;
+    text-align: middle;
+    text-align: center;
+    font-weight: bold;
+}

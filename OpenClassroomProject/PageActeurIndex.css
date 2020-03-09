@@ -1,0 +1,76 @@
+
+
+body{
+
+    background: linear-gradient(360deg, #FF2A00, #ffffff);
+}
+h1, .presentation {
+
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+#presentation {
+
+
+    border-width: 10px;
+    border-style: double;
+    border-color: red;
+    padding : 15px;
+    background-color: white;
+    box-shadow:12px 12px 2px 1px #540B03;
+    display: inline-block;
+    border-radius: 2%;
+    
+
+}
+
+h2 {
+
+     text-align: center;
+     text-decoration: underline;
+}
+
+table{
+
+    border-right: 5px double red;
+    border-left: 5px double red;
+    border-top: 5px double red;
+    border-bottom: 5px double red;
+    background-color: white;
+}
+td {
+
+    border-top : 3px double red; 
+    border-bottom:3px double red;
+    
+    padding: 0%; /*pour enlever la marge*/
+    border-collapse: collapse;
+}
+
+#logoActeur{
+
+    width : 100px;
+}
+
+#acteur{
+
+    text-align: center;
+}
+#description {
+
+    text-align: center;
+}
+
+
+div input.BoutonSuite
+{
+    float: right;
+    margin-right: 50px;
+    
+        
+}
+
+
+

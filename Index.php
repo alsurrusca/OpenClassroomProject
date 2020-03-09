@@ -5,7 +5,7 @@ session_start();
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="Index.css" />
+        <link rel="stylesheet" href="index.css" />
         <title>GBAF - Identification</title>
         
 
@@ -17,17 +17,17 @@ session_start();
                  </div>
 
                 <h2> GBAF - Intranet</h2>
-            
+            <hr>
             </header>
 
     <body>
         
-
-    <div class="Identification">
+<div id="Login" name="Login" class="Login">
+    
         <h1 class="titre-id">Indentification</h1>
       <br/>
 
-<div class="Login">
+
     <form method="post" action="Index.php">
     
     
@@ -40,11 +40,11 @@ session_start();
    <input type="password" name="password" id="password" required/></p>
  
 
-</div>
 
 <div>
 <p>
    <input type="submit" value="Envoyer" />
+   
 </p>
 </div>
 <p>
@@ -54,6 +54,8 @@ session_start();
 <a href="password_lost.php" class="pw" title="Cliquez ici si vous avez oublié votre mot de passe !">Mot de passe oublié</a>
 </p>
 </form>
+</div>
+
 
         <?php
 
@@ -137,10 +139,8 @@ session_start();
     }
         ?>
 
-    
+<?php include("Footer.php");?>
 </body>
 
-<footer>
-<p id="bottom-left">Tous droits réservés | © Surrusca Alissia | V1.0 </p>
-</foooter>
+
 </html>
