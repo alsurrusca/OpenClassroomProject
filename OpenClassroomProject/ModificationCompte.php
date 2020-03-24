@@ -1,17 +1,17 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="ModificationCompte.css" />
+        <link rel="stylesheet" href="CSS/ModificationCompte.css" />
         <title>GBAF - Modification du Compte</title>
 </head>
         
 
     <body>
-    <?php  if(isset($_SESSION['username']))
-{
-    ?>
+    
+  
 <header>  <?php include("EnTete.php");?> </header>
 
     <hr>
@@ -51,6 +51,7 @@
 
 
     <input type="submit" value="Mettre à jour le profil" />
+    <meta http-equiv="refresh" content="3; url=PageActeur.php">
     <?php if(isset($msg)) {echo $msg;}   ?>
          </fieldset>
 
@@ -59,7 +60,7 @@
 
 
 //Selectionner toutes les entrées de la table account
-        $req = "SELECT * FROM account WHERE username = ".$_SESSION['username']."";
+        $req = "SELECT mail, password, question, reponse FROM account WHERE username = ".$_SESSION['username']."";
         $requser = $bdd -> prepare($req);
         $requser -> execute();
         $user = $requser-> fetch();
@@ -99,15 +100,11 @@ if (isset($_POST['remplace_MDP']) && isset($_POST['mdp2']) AND !empty($_POST['re
         
        
 }
-echo "Vous allez être redirigé vers la page d'accueil!";
-$delai=3;
-$url='PageActeurIndex.php';
-header("Refresh: $delai; url=$url");
 
-}
-else {
-    header('Location : Index.php');
-}
+
+
+
+
 
 ?>
 <footer> <?php include ("Footer.php")?></footer>
