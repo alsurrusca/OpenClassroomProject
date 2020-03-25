@@ -1,0 +1,59 @@
+html {
+
+    height : 100%
+}
+
+body {
+
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+    background-size: cover;
+    background: linear-gradient(360deg, #FF2A00, white);
+  
+
+}
+
+#compte {
+
+    font-weight: bold;
+    border-width: 2px;
+    border-style: double;
+    border-color: black;
+    padding : 10px;
+    background-color: white;
+    box-shadow:12px 12px 2px 1px #540B03;
+    border-radius: 2%;
+    margin: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+
+}
+
+legend {
+
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width : 1080px) 
+{
+ 
+
+    #compte {
+
+        
+    font-weight: bold;
+    border-width: 2px;
+    border-style: double;
+    border-color: black;
+    background-color: white;
+    box-shadow:12px 12px 2px 1px #540B03;
+    border-radius: 2%;
+    padding: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    }
+}
